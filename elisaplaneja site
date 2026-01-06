@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisa Cardoso - Personal Financial Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Saira', sans-serif;
+            background-color: #111827; /* bg-gray-900 */
+        }
+        .text-gold {
+            color: #D4AF37;
+        }
+        .bg-gold {
+            background-color: #D4AF37;
+        }
+        .border-gold {
+            border-color: #D4AF37;
+        }
+        .cta-button {
+            transition: all 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(212, 175, 55, 0.2);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #D4AF37;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .service-card {
+            background-color: #1F2937; /* bg-gray-800 */
+            border: 1px solid #374151; /* border-gray-700 */
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+        }
+    </style>
+</head>
+<body class="text-gray-300">
+
+    <!-- Header -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-black/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">Elisa Cardoso</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="nav-link text-gray-300 hover:text-white">About</a>
+                <a href="#process" class="nav-link text-gray-300 hover:text-white">Process</a>
+                <a href="#services" class="nav-link text-gray-300 hover:text-white">Services</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="https://instagram.com/elisaplaneja" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/elisa-cardoso-82594325b" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5512998008930" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fab fa-whatsapp"></i></a>
+            </div>
+             <button id="mobile-menu-button" class="md:hidden text-gray-300 focus:outline-none">
+                <i class="fas fa-bars fa-lg"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+             <a href="#about" class="block py-2 text-gray-300 hover:text-white">About</a>
+             <a href="#process" class="block py-2 text-gray-300 hover:text-white">Process</a>
+             <a href="#services" class="block py-2 text-gray-300 hover:text-white">Services</a>
+             <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="relative overflow-hidden">
+         <div class="absolute inset-0 bg-gray-900 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(212,175,55,0.15),rgba(255,255,255,0))]"></div>
+        <div class="container mx-auto px-6 py-20 md:py-32 relative">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <p class="text-lg font-semibold text-gold">PERSONAL FINANCIAL PLANNER</p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mt-2">Elisa Cardoso</h1>
+                    <p class="mt-6 text-lg text-gray-400 max-w-lg mx-auto md:mx-0">I help you conquer your financial goals with efficiency and confidence. Your journey to financial freedom starts here. 📌💰</p>
+                    <div class="mt-8 flex justify-center md:justify-start gap-4">
+                        <a href="#contact" class="bg-gold text-gray-900 font-bold px-8 py-3 rounded-lg cta-button">Start Planning Today</a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                        <div class="absolute inset-0 border-4 border-gold rounded-full opacity-30 animate-pulse"></div>
+                        <img src="https://ugc.production.linktr.ee/b45ea95d-0ae9-414e-ac05-ee0ffc80e96e_FOTO-PROFISSIONAL-ELISA.jpeg" alt="Elisa Cardoso" class="absolute inset-0 w-full h-full object-cover rounded-full border-4 border-gray-800 shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-gray-950/50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-white mb-2">The Principles of Financial Planning</h2>
+            <p class="text-center text-gray-400 mb-12">A solid foundation is key to building wealth. Here’s my approach.</p>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 border border-gray-700 rounded-full w-20 h-20 flex items-center justify-center text-gold text-2xl"><i class="fas fa-search-dollar"></i></div>
+                    <h3 class="font-semibold text-white mt-4">Financial Diagnosis</h3>
+                    <p class="text-gray-400 text-sm mt-1">Understanding your starting point.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 border border-gray-700 rounded-full w-20 h-20 flex items-center justify-center text-gold text-2xl"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="font-semibold text-white mt-4">Goal Setting</h3>
+                    <p class="text-gray-400 text-sm mt-1">Defining what you want to achieve.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center">
+                    <div class="bg-gray-800 border border-gray-700 rounded-full w-20 h-20 flex items-center justify-center text-gold text-2xl"><i class="fas fa-map-signs"></i></div>
+                    <h3 class="font-semibold text-white mt-4">Strategic Planning</h3>
+                    <p class="text-gray-400 text-sm mt-1">Creating your personalized roadmap.</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center">
+                     <div class="bg-gray-800 border border-gray-700 rounded-full w-20 h-20 flex items-center justify-center text-gold text-2xl"><i class="fas fa-tasks"></i></div>
+                    <h3 class="font-semibold text-white mt-4">Implementation & Review</h3>
+                    <p class="text-gray-400 text-sm mt-1">Putting the plan to work and adapting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-white mb-12">My Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card rounded-lg p-8 flex flex-col">
+                    <i class="fas fa-graduation-cap text-gold text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Master Your Finances</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">A complete course to learn how to organize, plan, and grow your finances with proven habits for success.</p>
+                    <a href="https://elisaplaneja.herospark.co/domine-suas-financas-desenvolva-habitos-financeiros-de-sucesso" target="_blank" rel="noopener noreferrer" class="text-gold font-semibold hover:text-white transition-colors">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                <div class="service-card rounded-lg p-8 flex flex-col">
+                    <i class="fas fa-user-check text-gold text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">1-on-1 Financial Planning</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">Secure a spot for a personalized financial diagnosis and planning session tailored to your unique profile.</p>
+                    <a href="https://forms.gle/xBwwgpHMWnUq8kPb8" target="_blank" rel="noopener noreferrer" class="text-gold font-semibold hover:text-white transition-colors">Join the Waiting List <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                <div class="service-card rounded-lg p-8 flex flex-col">
+                    <i class="fas fa-building text-gold text-3xl mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Braúna Planejamento</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">Explore our full suite of professional services and meet the team dedicated to your financial success.</p>
+                    <a href="https://braunaplanejamento.com.br/" target="_blank" rel="noopener noreferrer" class="text-gold font-semibold hover:text-white transition-colors">Visit Our Firm <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-950/50">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-5 gap-12 items-center">
+                <div class="md:col-span-2">
+                    <img src="https://ugc.production.linktr.ee/b45ea95d-0ae9-414e-ac05-ee0ffc80e96e_FOTO-PROFISSIONAL-ELISA.jpeg" alt="Elisa Cardoso" class="rounded-lg shadow-2xl mx-auto">
+                </div>
+                <div class="md:col-span-3">
+                    <h2 class="text-3xl font-bold text-white mb-4">Dedicated to Your Financial Well-being</h2>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        With a passion for finance and a commitment to my clients, I transitioned into financial planning to make a real difference in people's lives. My approach is rooted in clarity, transparency, and a deep understanding of each client's individual needs.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed">
+                        I believe that financial planning is not just about numbers; it's about creating a life of freedom and choice. As your partner, I am dedicated to providing you with the knowledge and strategies to build a secure and prosperous future.
+                    </p>
+                     <div class="mt-8">
+                         <a href="#contact" class="bg-transparent border-2 border-gold text-gold font-bold px-8 py-3 rounded-lg cta-button">Let's Connect</a>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <footer id="contact" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Finances?</h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">Take the first step. Reach out for a conversation about your financial future. I'm looking forward to helping you build the life you envision.</p>
+            <div class="flex justify-center space-x-8 text-3xl mb-10">
+                <a href="https://instagram.com/elisaplaneja" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.threads.net/@Elisa.planeja" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fab fa-threads"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5512998008930" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.linkedin.com/in/elisa-cardoso-82594325b" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">&copy; 2025 Elisa Cardoso | Personal Financial Planner. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-button').onclick = function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        };
+    </script>
+</body>
+</html>
